@@ -1,0 +1,13 @@
+<div class="custom-file">
+  <input type="file" id="file"
+         #userPhoto
+         multiple
+         (change)="showPreview($event)"
+         name="image"
+         autocomplete="off" class="custom-file-input" id="inputGroupFile01">
+  <label class="custom-file-label" for="inputGroupFile01">Choose</label>
+</div>
+
+<img *ngFor="let img of imgs" class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 15rem;"
+     src="{{img}}"
+     alt="">
